@@ -1,4 +1,5 @@
 ﻿# EditorConfig is awesome: http://editorconfig.org
+# You can learn more about editorconfig here: https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-code-style-settings-reference
 root = true
 
 [*]
@@ -7,6 +8,9 @@ end_of_line = crlf
 indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
+
+[*.{*proj,props,targets}]
+indent_size = 2
 
 [*.{cs,vb}]
 indent_size = 4
