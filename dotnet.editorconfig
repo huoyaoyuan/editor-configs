@@ -3,17 +3,22 @@
 root = true
 
 [*]
-charset = utf-8-bom
+charset = utf-8
 end_of_line = crlf
 indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
+
+[*.xaml]
+indent_size = 4
+charset = utf-8-bom
 
 [*.{*proj,props,targets}]
 indent_size = 2
 
 [*.{cs,vb}]
 indent_size = 4
+charset = utf-8-bom
 
 #### .NET code style settings ####
 
@@ -169,6 +174,12 @@ dotnet_diagnostic.IDE0005.severity = warning
 # IDE0055: Fix formatting
 dotnet_diagnostic.IDE0055.severity = warning
 
+# CA1031: Do not catch general exception types
+dotnet_diagnostic.CA1031.severity = none
+
+# CA1032: Implement standard exception constructor
+dotnet_diagnostic.CA1032.severity = silent
+
 # CA1034: Nested types should not be visible
 dotnet_diagnostic.CA1034.severity = none
 
@@ -177,6 +188,21 @@ dotnet_diagnostic.CA1062.severity = none
 
 # CA1303: Do not pass literals as localized parameters
 dotnet_diagnostic.CA1303.severity = none
+
+# CA1812: Avoid uninstantiated internal classes
+dotnet_diagnostic.CA1812.severity = silent
+
+# CA1815: Override equals and operator equals on value types
+dotnet_diagnostic.CA1815.severity = silent
+
+# CA2000: Dispose objects before losing scope
+dotnet_diagnostic.CA2000.severity = silent
+
+# CA2225: Operator overloads have named alternates
+dotnet_diagnostic.CA2225.severity = none
+
+# CA2234: Pass system uri objects instead of strings
+dotnet_diagnostic.CA2234.severity = none
 
 # CA5350: Do Not Use Weak Cryptographic Algorithms
 dotnet_diagnostic.CA5350.severity = none
@@ -220,7 +246,7 @@ csharp_style_conditional_delegate_call = true : warning
 csharp_prefer_braces = when-multiline : suggestion
 
 # Unused value preferences
-csharp_style_unused_value_expression_statement_preference = discard_variable : warning
+csharp_style_unused_value_expression_statement_preference = discard_variable : slient
 csharp_style_unused_value_assignment_preference = discard_variable : warning
 
 # Index and range preferences
